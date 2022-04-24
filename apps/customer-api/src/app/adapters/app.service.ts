@@ -48,7 +48,7 @@ export class AppService {
     const responseData = await lastValueFrom(
       this.httpService
         .post(
-          `http://${process.env.SENTIMENT_MODEL_URL}`,
+          `${process.env.SENTIMENT_MODEL_URL}`,
           JSON.stringify(dataEncoded)
         )
         .pipe(

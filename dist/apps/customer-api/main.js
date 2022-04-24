@@ -51,7 +51,7 @@ let AppService = class AppService {
     prediction(dataEncoded) {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             const responseData = yield (0, rxjs_1.lastValueFrom)(this.httpService
-                .post(`http://${process.env.SENTIMENT_MODEL_URL}`, JSON.stringify(dataEncoded))
+                .post(`${process.env.SENTIMENT_MODEL_URL}`, JSON.stringify(dataEncoded))
                 .pipe((0, rxjs_1.map)((response) => {
                 return response.data;
             })));
@@ -250,7 +250,7 @@ module.exports = require("util");
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -264,14 +264,14 @@ module.exports = require("util");
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
