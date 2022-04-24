@@ -3,7 +3,7 @@ steps:
     args: ['echo', 'hi']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'asia-southeast2-docker.pkg.dev/$PROJECT_ID/alphabet/alphabet:$SHORT_SHA', '-f', 'apps/Dockerfile']
+    args: ['build', '-f', 'apps/Dockerfile', '-t', 'asia-southeast2-docker.pkg.dev/$PROJECT_ID/alphabet/alphabet:$SHORT_SHA']
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'asia-southeast2-docker.pkg.dev/$PROJECT_ID/alphabet/alphabet:$SHORT_SHA']
