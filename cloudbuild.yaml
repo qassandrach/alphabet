@@ -2,14 +2,14 @@ steps:
   - name: 'bash'
     args: ['echo', 'hi']
 
-# - name: 'gcr.io/cloud-builders/docker'
-#   args: ['build', '-t', 'asia-southeast2-docker.pkg.dev/$PROJECT_ID/alphabet/alphabet:$SHORT_SHA', '-f', 'apps/Dockerfile']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'asia-southeast2-docker.pkg.dev/$PROJECT_ID/alphabet/alphabet:$SHORT_SHA', '-f', 'apps/Dockerfile']
 
-# - name: 'gcr.io/cloud-builders/docker'
-#   args: ['push', 'asia-southeast2-docker.pkg.dev/$PROJECT_ID/alphabet/alphabet:$SHORT_SHA']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'asia-southeast2-docker.pkg.dev/$PROJECT_ID/alphabet/alphabet:$SHORT_SHA']
 
-# - name: 'gcr.io/cloud-builders/gcloud'
-#   args: ['run', 'deploy', 'alphabet', '--image=asia-southeast2-docker.pkg.dev/$PROJECT_ID/alphabet/alphabet:$SHORT_SHA', '--region', 'asia-southeast2', '--platform', 'managed', '--port', '5000', '--allow-unauthenticated']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['run', 'deploy', 'alphabet', '--image=aasia-southeast2-docker.pkg.dev/$PROJECT_ID/alphabet/alphabet:$SHORT_SHA', '--region', 'asia-southeast1', '--platform', 'managed', '--port', '5000', '--allow-unauthenticated']
 
-# images:
-# - asia-southeast2-docker.pkg.dev/$PROJECT_ID/alphabet/alphabet:$SHORT_SHA
+images:
+- asia-southeast2-docker.pkg.dev/$PROJECT_ID/alphabet/alphabet:$SHORT_SHA
